@@ -8,7 +8,10 @@ import {
 } from 'lucide-react';
 
 // Connects to your Spring Boot Backend
-const API_BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/api/applications`;
+const API_BASE_URL =
+  process.env.REACT_APP_API_BASE_URL ||
+  "https://job-tracker-fullstack-3m2s.onrender.com/api/applications";
+
 const GEMINI_API_KEY = ""; 
 
 // --- BOLD & VIBRANT COLOR SCHEMAS ---
