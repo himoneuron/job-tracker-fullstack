@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 // Connects to your Spring Boot Backend
-const API_BASE_URL = "http://localhost:8080/api/applications";
+const API_BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/api/applications`;
 const GEMINI_API_KEY = ""; 
 
 // --- BOLD & VIBRANT COLOR SCHEMAS ---
@@ -92,7 +92,7 @@ function App() {
       setLoading(false);
       setError(null);
     } catch (err) {
-      setError("Connect to Spring Boot on port 8080 to see your data.");
+      setError("using the backedn data to load from render");
       setLoading(false);
     }
   }, [selectedAppId]);
